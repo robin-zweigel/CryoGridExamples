@@ -6,13 +6,15 @@ addpath(genpath(source_path));
 %init_format = 'EXCEL3D'; %EXCEL or YAML
 init_format = 'EXCEL';
 
-run_name = 'example3';
+
+run_name= 'Terelj_NS_CLM5_denserGround';
+
 
 constant_file = 'CONSTANTS_excel'; %file with constants
 result_path = './results/';  %with trailing backslash
 
-% end modified by user
-%------------------------
+% end modified by user ----------------------------------------------------
+%--------------------------------------------------------------------------
 
 %providers
 provider = PROVIDER;

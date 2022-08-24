@@ -1,0 +1,1 @@
+Terelj runs similar to Terelj_NS_CLM5_denserGround, but with lateral drainage through LAT3D_WATER_UNCONFINED_AQUIFER_RICHARDS_EQ

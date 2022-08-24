@@ -1,0 +1,1 @@
+Terelj test run with lower Leaf Area Index (LAI = 1), based on hemispheric image showing LAI+SAI = 2.2 - 2.5 on 29. May 2022

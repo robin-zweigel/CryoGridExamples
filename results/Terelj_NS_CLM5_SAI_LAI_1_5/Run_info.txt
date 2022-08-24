@@ -1,0 +1,1 @@
+Terelj test rund with reduction in incoming snow by a quarter (snow_fraction = 0.75)
