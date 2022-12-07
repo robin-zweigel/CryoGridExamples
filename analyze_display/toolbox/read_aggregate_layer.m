@@ -31,11 +31,11 @@ for run_i = 1:length(files)
     % Go through all timesteps
     for time_i = 1:length(out.TIMESTAMP)
         I = find(result.time == out.TIMESTAMP(time_i));
+        pos = 0;
         
         % Go through all the stratigrapy
         for strat_i = 1:size(out.STRATIGRAPHY{1, time_i})
             CURRENT = class(out.STRATIGRAPHY{1, time_i}{strat_i, 1});
-            pos = 0;
             
             if strcmp(CURRENT(1:10),'VEGETATION')
                 for var_i = 1:length(variables)

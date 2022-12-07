@@ -7,8 +7,8 @@
 % addpath(genpath(modules_path));
 
 result_path = '../../results/';
-run_number = 'Terelj_NS_CLM5_denserGround';
-out_timstamp = '20060901';
+run_number = 'Terelj_NS_CLM5_base1';
+out_timstamp = '20070901';
 
 load([result_path run_number '/' run_number '_' out_timstamp '.mat'])
 

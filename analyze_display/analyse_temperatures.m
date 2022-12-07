@@ -3,17 +3,17 @@
 clear all
 % close all
 
-result_path = 'C:\Users\robinbz\Documents\GitHub\CryoGridExamples\results\';
-source_path = 'C:\Users\robinbz\Documents\GitHub\CryoGrid\source\';
+result_path = '\\kant\geo-geohyd-u1\robinbz\Dokumenter\GitHub\CryoGridExamples\results\';
+source_path = '\\kant\geo-geohyd-u1\robinbz\Dokumenter\GitHub\CryoGrid\source\';
 addpath(genpath(source_path));
 addpath(genpath('toolbox\'))
 
 % == == == EDIT BY USER == == ==
 %
-run1 = 'Terelj_flat_CLM5_snow_old_c';
-run2 = 'Terelj_flat_CLM5_snow';
+run1 = 'Terelj_NS_CLM5_newForcing';
+run2 = 'Terelj_NS_CLM5_newForcing2';
 
-grid_vec = [.025 2]; % specify grid to interpolate to - [Spacing Depth]
+grid_vec = [.05 3.5]; % specify grid to interpolate to - [Spacing Depth]
 
 variable = 'T';
 %
@@ -34,7 +34,7 @@ result1(1,:) = result1(2,:); % assign values to top row (depth = 0)
 
 depth2 = [zeros(1,size(temp2.GROUND.layerThick,2)); cumsum(temp2.GROUND.layerThick)];
 midpoints2 = (depth2(1:end-1,:)+depth2(2:end,:))./2;
-result2 = interp2(temp2.time,midpoints1(:,1),temp2.GROUND.(variable),temp2.time,grid');
+result2 = interp2(temp2.time,midpoints2(:,1),temp2.GROUND.(variable),temp2.time,grid');
 result2(1,:) = result2(2,:); % assign values to top row (depth = 0) 
 
 % Snow

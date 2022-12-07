@@ -19,7 +19,7 @@ for run_i = 1:length(files)
         I = find(result.time == out.TIMESTAMP(time_i));
         
         % go through all the stratigraphy
-        for strat_i = 1:size(out.STRATIGRAPHY{1, 1})
+        for strat_i = 1:2 %size(out.STRATIGRAPHY{1, 1})
             CURRENT = class(out.STRATIGRAPHY{1, time_i}{strat_i, 1});
             
             result.area(strat_i,I) = out.STRATIGRAPHY{1, time_i}{strat_i, 1}.STATVAR.area(1);

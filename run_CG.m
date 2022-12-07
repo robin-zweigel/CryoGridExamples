@@ -7,7 +7,7 @@ addpath(genpath(source_path));
 init_format = 'EXCEL';
 
 
-run_name= 'Terelj_NS_CLM5_denserGround';
+run_name= 'Terelj_scaled_snow';
 
 
 constant_file = 'CONSTANTS_excel'; %file with constants

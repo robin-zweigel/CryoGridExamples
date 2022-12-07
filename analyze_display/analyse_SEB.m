@@ -3,21 +3,21 @@
 clear all
 % close all
 
-result_path = 'C:\Users\robinbz\Documents\GitHub\CryoGridExamples\results\';
-source_path = 'C:\Users\robinbz\Documents\GitHub\CryoGrid\source\';
+result_path = '\\kant\geo-geohyd-u1\robinbz\Dokumenter\GitHub\CryoGridExamples\results\';
+source_path = '\\kant\geo-geohyd-u1\robinbz\Dokumenter\GitHub\CryoGrid\';
 addpath(genpath(source_path));
 addpath(genpath('toolbox\'))
 
 % == == == EDIT BY USER == == ==
 %
-% run1 = 'Terelj_NS_CLM5_snow';
-run2 = 'Terelj_NS_CLM5_base';
+run1 = 'Terelj_NS_CLM5_newForcing';
+run2 = 'Terelj_NS_CLM5_newForcing2';
 
 variables = {'Lin','Lout','Sin','Sout','Qe','Qh'};
 %
 % == == == END EDIT == == == ==
 
-% data1 = read_aggregate_surface([result_path run1], variables);
+data1 = read_aggregate_surface([result_path run1], variables);
 data2 = read_aggregate_surface([result_path run2], variables);
 
 %% Plot the results
@@ -28,7 +28,7 @@ hold on
 plot(data1.time,data1.Lin(1,:)-data1.Lout(1,:))
 plot(data2.time,data2.Lin(1,:)-data2.Lout(1,:),'--')
 datetick
-xlim([data1.time(1) data1.time(end)])
+xlim([data2.time(1) data1.time(end)])
 title('Absorbed Longwave (Lin-Lout)')
 ylabel('Radiation [W/m^2]')
 legend({string(run1),string(run2)},'Location','southwest')

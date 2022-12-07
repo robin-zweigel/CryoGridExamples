@@ -1,6 +1,6 @@
 % Read vars
 % R. B. Zweigel, January 2022
-% clear all
+clear all
 % close all
 
 result_path = '\\kant\geo-geohyd-u1\robinbz\Dokumenter\GitHub\CryoGridExamples\results\';
@@ -11,11 +11,11 @@ addpath(genpath('toolbox\'))
 % == == == EDIT BY USER == == ==
 %
 
-run = t4L'Terelj_NS_CLM5_lowLAI';
+run = 'Terelj_NS_CLM5_drainage';
 
 %grid_vec = [.025 2]; % specify grid to interpolate to - [Spacing Depth]
 
-TempVars = {'Sin','Lin','Lout','Sout','LAI','Qe','Qh'};
+TempVars = {'Sin','Lin','Lout','Sout','LAI','Qe','Qh','evap','sublim','transp'};
 %
 % == == == END EDIT == == == ==
 
